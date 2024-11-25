@@ -1,0 +1,101 @@
+@font-face {
+  font-display: auto;
+  font-family: 'Rational';
+  font-style: normal;
+  font-weight: 400;
+  src: local("rational-medium"), url('@/assets/fonts/rational-medium.woff2') format('woff2');
+  unicode-range: U+000-5FF;
+}
+
+@font-face {
+  font-display: auto;
+  font-family: 'Rational';
+  font-style: normal;
+  font-weight: 600;
+  src: local("rational-semibold"), url('@/assets/fonts/rational-semibold.woff2') format('woff2');
+  unicode-range: U+000-5FF;
+}
+
+@font-face {
+  font-display: auto;
+  font-family: 'Rational';
+  font-style: normal;
+  font-weight: 700;
+  src: local("rational-bold"), url('@/assets/fonts/rational-bold.woff2') format('woff2');
+  unicode-range: U+000-5FF;
+}
+
+@font-face {
+  font-display: auto;
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local("space_mono-bold"), url('@/assets/fonts/space_mono-bold.woff2') format('woff2');
+  unicode-range: U+000-5FF;
+}
+
+a, b, strong {
+  font-family: 'Rational';
+  font-weight: 600;
+}
+
+code, pre {
+  font-family: 'Space Mono';
+  font-weight: 400;
+}
+
+.h1-text {
+  font-family: 'Rational';
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 7rem;
+  margin-block: 1rem;
+}
+
+.h2-text {
+  font-family: 'Rational';
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 5.5rem;
+  margin-block: 1rem;
+}
+
+.h3-text {
+  font-family: 'Rational';
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 5rem;
+  margin-block: 0.75rem;
+}
+
+.h4-text {
+  font-family: 'Rational';
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 3.5rem;
+  margin-block: 0.5rem;
+}
+
+.h5-text {
+  font-family: 'Rational';
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 3rem;
+  margin-block: 0px;
+}
+
+.h6-text {
+  font-family: 'Rational';
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin-block: 0px;
+}
+
+.hero-text {
+  font-family: 'Rational';
+  font-size: 16rem;
+  font-weight: 700;
+  line-height: 17rem;
+  margin-block: 1rem;
+}

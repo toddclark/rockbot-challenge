@@ -1,0 +1,51 @@
+{
+  "short_name": "DVox",
+  "name": "Divergent Vox",
+  "icons": [
+    {
+      "src": "/assets/dvox.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/assets/dvox192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/assets/dvox512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "id": "/?source=pwa",
+  "start_url": "/?source=pwa",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#00b0ff",
+  "shortcuts": [
+    {
+      "name": "Divergent Vox",
+      "short_name": "DVox",
+      "description": "Speak with someone!",
+      "url": "/app?source=pwa",
+      "icons": [{ "src": "/assets/dvox192.png", "sizes": "192x192" }]
+    }
+  ],
+  "description": "A tool for non-verbal individuals and others.",
+  "screenshots": [
+    {
+      "src": "/images/screenshot1.png",
+      "type": "image/png",
+      "sizes": "540x720",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/images/screenshot2.jpg",
+      "type": "image/jpg",
+      "sizes": "720x540",
+      "form_factor": "wide"
+    }
+  ]
+}
