@@ -1,5 +1,9 @@
 # Rockbot Challenge
 
+## Requirements
+**npm**: `>=10.2.4`
+**node**:`>=20.11.1`
+
 ## Project Setup
 
 ```sh
