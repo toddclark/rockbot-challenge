@@ -1,5 +1,5 @@
 <template>
-  <main :class="{ 'bg-surface-50': appInitialized, initialized: appInitialized }">
+  <main class="library-view" :class="{ 'bg-surface-50': appInitialized, initialized: appInitialized }">
     <h1 class="hero-text text-surface-300">Books!</h1>
     <div class="content">
       <p class="h5-text description">
@@ -29,6 +29,8 @@ main {
   isolation: isolate;
   position: relative;
 
+  container: view / inline-size;
+
   .content {
     display: flex;
     flex-direction: column;
@@ -47,6 +49,20 @@ main {
     margin-inline-start: -1.25rem;
     position: absolute;
     z-index: -1;
+  }
+}
+
+@container view (width < 550px) {
+  h1.hero-text {
+    font-size: 7rem;
+    line-height: 14rem;
+    margin-inline-start: -0.5rem;
+  }
+
+  p.h5-text.description {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    margin-top: -0.75rem;
   }
 }
 </style>

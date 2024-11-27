@@ -8,7 +8,7 @@ import { search as searchWeb } from './library-web.ts';
 
 import { useLibraryStore } from '@/stores/library.store.ts';
 
-const cleanBook = (book: LibraryResponseBook): LibraryBook => {
+export const cleanBook = (book: LibraryResponseBook): LibraryBook => {
   return {
     authorKey: Array.isArray(book.author_key) ? book.author_key : [],
     author: Array.isArray(book.author_name) ? book.author_name : [],

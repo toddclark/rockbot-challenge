@@ -6,6 +6,7 @@
 // biome-ignore lint: disable
 export {}
 declare global {
+  const DEFAULT_PAGING_LIMIT: typeof import('./stores/library.store')['DEFAULT_PAGING_LIMIT']
   const EffectScope: typeof import('vue')['EffectScope']
   const computed: typeof import('vue')['computed']
   const createApp: typeof import('vue')['createApp']
@@ -83,6 +84,7 @@ import { UnwrapRef } from 'vue'
 declare module 'vue' {
   interface GlobalComponents {}
   interface ComponentCustomProperties {
+    readonly DEFAULT_PAGING_LIMIT: UnwrapRef<typeof import('./stores/library.store')['DEFAULT_PAGING_LIMIT']>
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
     readonly createApp: UnwrapRef<typeof import('vue')['createApp']>

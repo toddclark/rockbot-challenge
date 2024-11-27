@@ -28,7 +28,7 @@ describe('RBButton', () => {
     expect(wrapper.vm.rotated).toBeFalsy();
 
     // computed
-    expect(wrapper.vm.consolidatedAriaLabel).toEqual('');
+    expect((wrapper.vm as any).consolidatedAriaLabel).toEqual('');
   });
 
   test('complete props mount', async () => {
@@ -58,7 +58,7 @@ describe('RBButton', () => {
     expect(wrapper.vm.rotated).toBeTruthy();
 
     // computed
-    expect(wrapper.vm.consolidatedAriaLabel).toBeUndefined();
+    expect((wrapper.vm as any).consolidatedAriaLabel).toBeUndefined();
   });
 
   test('consolidatedAriaLabel handling', async () => {
@@ -70,7 +70,7 @@ describe('RBButton', () => {
 
     await wrapper.vm.$nextTick();
 
-    expect(wrapper.vm.consolidatedAriaLabel).toBeUndefined();
+    expect((wrapper.vm as any).consolidatedAriaLabel).toBeUndefined();
 
     wrapper = createWrapper({
       ariaLabel: 'test-ariaLabel',
@@ -79,7 +79,7 @@ describe('RBButton', () => {
 
     await wrapper.vm.$nextTick();
 
-    expect(wrapper.vm.consolidatedAriaLabel).toEqual('test-ariaLabel');
+    expect((wrapper.vm as any).consolidatedAriaLabel).toEqual('test-ariaLabel');
 
     wrapper = createWrapper({
       label: 'test-label',
@@ -87,6 +87,6 @@ describe('RBButton', () => {
 
     await wrapper.vm.$nextTick();
 
-    expect(wrapper.vm.consolidatedAriaLabel).toEqual('test-label');
+    expect((wrapper.vm as any).consolidatedAriaLabel).toEqual('test-label');
   });
 });

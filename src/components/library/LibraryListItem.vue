@@ -1,25 +1,29 @@
 <template>
   <li class="library-list-item" role="listitem">
-    <dl class="item-details">
-      <div class="item-title">
-        <dt class="sr-only">Title</dt>
-        <dd class="h3-text">{{ data?.title }}</dd>
-      </div>
-      <div class="item-info">
+    <dl class="item-title">
+      <dt class="sr-only">Title</dt>
+      <dd class="h3-text">{{ data?.title }}</dd>
+    </dl>
+    <dl class="item-info">
+      <div>
         <dt>
           <Icon icon="material-symbols:ink-pen" />
           {{ data?.author?.length > 1 ? 'Authors' : 'Author' }}
         </dt>
+        <dd><strong>{{ (data?.author ?? ['Unknown']).join(', ') }}</strong></dd>
+      </div>
+      <div>
         <dt>
           <Icon icon="material-symbols:public" />
           First Published
         </dt>
+        <dd><strong>{{ data?.firstPublishYear ?? 'Unknown' }}</strong></dd>
+      </div>
+      <div>
         <dt>
           <Icon icon="material-symbols:book-4-spark-rounded" />
           Edition
         </dt>
-        <dd><strong>{{ (data?.author ?? ['Unknown']).join(', ') }}</strong></dd>
-        <dd><strong>{{ data?.firstPublishYear ?? 'Unknown' }}</strong></dd>
         <dd><strong>{{ data?.edition }}</strong></dd>
       </div>
     </dl>
@@ -46,17 +50,23 @@
   margin-top: 1rem;
   padding: 1rem;
 
-  .item-details {
+  container: library-item / inline-size;
+
+  .item-title {
+    dd {
+      color: var(--primary);
+      line-height: 4rem;
+      margin-inline-end: 0;
+      margin-inline-start: -0.25rem;
+    }
+  }
+
+  .item-info {
     display: flex;
-    flex-direction: column;
-    margin-block: 0;
+    gap: 1rem;
 
-    .item-info {
-      display: grid;
-      gap: 0 1rem;
-      grid-template-rows: 1.25rem auto;
-      grid-template-columns: repeat(3, 1fr);
-
+    > div {
+      flex: 1;
       dd {
         font-size: 1.25rem;
         margin-inline: 0;
@@ -72,14 +82,25 @@
         }
       }
     }
+  }
+}
 
-    .item-title {
-      dd {
-        color: var(--primary);
-        line-height: 3rem;
-        margin-inline-end: 0;
-        margin-inline-start: -0.25rem;
-      }
+@container library-item (width < 550px) {
+  .item-title {
+    dd.h3-text {
+      font-size: 2rem;
+      line-height: 2rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .item-info {
+    flex-direction: column;
+    gap: 1rem;
+
+    dd {
+      padding-inline-start: 3rem;
     }
   }
 }

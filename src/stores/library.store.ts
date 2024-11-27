@@ -11,7 +11,7 @@ interface ModuleState {
   updating: boolean,
 }
 
-const DEFAULT_PAGING_LIMIT = 20;
+export const DEFAULT_PAGING_LIMIT = 20;
 
 export const useLibraryStore = defineStore('library', {
   state: (): ModuleState => ({

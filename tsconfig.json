@@ -23,5 +23,5 @@
   },
   "exclude": ["dist", "node_modules"],
   "extends": "@vue/tsconfig/tsconfig.json",
-  "include": ["src/**/*", "src/**/*.ts", "src/**/*.vue"],
+  "include": ["src/**/*", "src/**/*.ts", "src/**/*.vue", "test/**/*"],
 }

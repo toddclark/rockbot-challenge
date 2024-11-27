@@ -109,6 +109,8 @@
 );
 
 body {
+  container: body / inline-size;
+
   @extend .text-surface-900;
 
   font-family: Rational, Verdana, Geneva, Tahoma, sans-serif;
@@ -206,5 +208,36 @@ body {
     position: absolute !important;
     width: 1px !important;
     white-space: nowrap !important;
+  }
+}
+
+@container body (width < 550px) {
+  #app {
+    display: flex;
+    flex-direction: column;
+
+    > .global-navigation {
+      height: 4rem;
+      transition: height 0.5s ease;
+      width: 100%;
+
+      &.open {
+        height: 12rem;
+      }
+
+      .rb-button {
+        .iconify {
+          transform: rotate(90deg);
+
+          &.rotated {
+            transform: rotate(270deg);
+          }
+        }
+      }
+    }
+
+    > main {
+      flex: 1;
+    }
   }
 }

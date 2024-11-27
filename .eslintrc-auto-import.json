@@ -77,6 +77,7 @@
     "watchSyncEffect": true,
     "stores": true,
     "useTmpStore": true,
-    "useLibraryStore": true
+    "useLibraryStore": true,
+    "DEFAULT_PAGING_LIMIT": true
   }
 }

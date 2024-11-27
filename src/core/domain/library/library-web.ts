@@ -28,6 +28,4 @@ export const search = async (params: Record<string, any>): Promise<{
     console.error('library-web::search - ', ex);
     throw ex;
   }
-
-  return Promise.reject({ data: null, response: null });
 };

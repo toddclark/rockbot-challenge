@@ -28,7 +28,7 @@ describe('HomeView', () => {
     // check for basic instantiation
     expect(wrapper.vm.$el).toBeInstanceOf(HTMLElement);
     expect(wrapper.vm.$el.tagName).toEqual('MAIN');
-    expect(wrapper.vm.$el.classList).toEqual({});
+    expect(wrapper.vm.$el.classList).toEqual({ 0: 'home-view' });
 
     initializedValue.value = true;
     await wrapper.vm.$nextTick();

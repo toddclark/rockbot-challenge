@@ -13,7 +13,7 @@ describe('LibraryListing', () => {
     global: {
       plugins: [pinia]
     },
-  });
+  }) as any;
 
   beforeEach(() => {
     pinia = createPinia();

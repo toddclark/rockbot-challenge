@@ -89,6 +89,7 @@
 
   &.icon-only {
     justify-content: center;
+    min-height: 2rem;
     padding: 0;
     width: 2rem;
   }

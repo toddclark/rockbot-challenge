@@ -20,7 +20,7 @@ describe('LibraryListItem', () => {
 
     expect(wrapper.vm.data).toBeUndefined();
 
-    expect(/Missing\s+required\s+prop:\s+"data"/.test(warnSpy.mock.calls[0])).toBeTruthy();
+    expect(/Missing\s+required\s+prop:\s+"data"/.test(warnSpy.mock.calls[0] as any)).toBeTruthy();
   });
 
   test('mount', async () => {

@@ -92,6 +92,8 @@
 
 <style lang="scss" scoped>
 .library-listing {
+  container: library-listing / inline-size;
+
   .empty-message {
     color: var(--surface-600);
     padding: 2rem;
@@ -103,6 +105,7 @@
     background-color: var(--surface-0);
     box-shadow: var(--elevation-3);
     display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem;
     justify-content: space-between;
     padding: 1rem;
@@ -111,6 +114,22 @@
       align-items: center;
       display: flex;
       gap: 0.5rem;
+    }
+  }
+}
+
+@container library-listing (width < 550px) {
+  .search-container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    > div:first-child {
+      align-self: flex-start;
+      width: 100%;
+
+      > input {
+        flex: 1;
+      }
     }
   }
 }

@@ -29,6 +29,7 @@
 
   function navigate(name: string) {
     router.push({ name });
+    open.value = false;
   }
 
   function toggleNavigation() {
